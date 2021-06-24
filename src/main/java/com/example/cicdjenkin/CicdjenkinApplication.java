@@ -15,7 +15,7 @@ public class CicdjenkinApplication {
 
     @GetMapping("/ci")
     public String Hello() {
-        return "Welcome to ci cd with Jenkins!!!";
+        return "Welcome to ci cd with Jenkins!A";
     }
 
 }
