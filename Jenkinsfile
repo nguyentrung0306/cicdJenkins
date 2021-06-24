@@ -1,22 +1,21 @@
-pipeline{
+pipeline {
+    agent any
 
-    agent {
-        docker {
-        image 'maven'
-        args '-v $HOME/.m2:/root/m2'
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
         }
     }
-
-stages{
-    stage('build')
-        {
-      steps{
-          script{
-           sh 'mvn clean install'
-                }
-            }
-         }
-       }
-
-
 }
