@@ -1,6 +1,7 @@
 pipeline {
     agent any
 
+    def mvnHome = tool 'maven'
     triggers {
         pollSCM '* * * * *' 
     }
@@ -8,9 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                withMaven(maven: 'mvn') {
-                    sh "mvn clean package"
-                }
+                sh "'${mvnHome}/bin/mvn' clean install"
             }
         }
         stage('Test') {
