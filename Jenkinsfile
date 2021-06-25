@@ -20,7 +20,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying..tubo.'
+                echo 'Deploying..tubo. fast'
             }
         }
     }
