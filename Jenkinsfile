@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                sh "docker.build("test-image")"
+                docker.build("test-image")
             }
         }
         stage('Deploy') {
