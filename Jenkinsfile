@@ -16,6 +16,11 @@ pipeline {
                 echo 'Testing..'
             }
         }
+        stage('Build Docker image') {
+            steps {
+                sh "docker.build("test-image")"
+            }
+        }
         stage('Deploy') {
             steps {
                 echo 'Deploying......'
