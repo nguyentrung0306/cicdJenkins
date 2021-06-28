@@ -16,9 +16,6 @@ pipeline {
                 echo 'Testing..'
             }
         }
-        stage('Build Docker image') {
-            docker.build("imagesIII")
-        }
         stage('Deploy') {
             steps {
                 echo 'Deploying......'
