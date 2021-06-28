@@ -17,9 +17,7 @@ pipeline {
             }
         }
         stage('Build Docker image') {
-            steps {
-                docker.build.testImage
-            }
+            def img = docker.build('jenkins-docker-maven-example:latest', '.')
         }
         stage('Deploy') {
             steps {
