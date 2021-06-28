@@ -13,4 +13,4 @@ script:
   - ./mvnw deploy jib:build -P deploy-docker
 
 after_success:
-  - bash <(curl -s http://localhost:7000/ci)
+  - bash <(curl -s http://localhost:7000/ci). das
