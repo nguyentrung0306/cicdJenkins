@@ -18,7 +18,7 @@ pipeline {
         }
         stage('Build Docker image') {
             steps {
-                docker.build("test-image")
+                docker.build.testImage
             }
         }
         stage('Deploy') {
