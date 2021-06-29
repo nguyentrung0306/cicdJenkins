@@ -11,6 +11,11 @@ pipeline {
                 sh "mvn clean package"
             }
         }
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t trungnd01/testImages .'
+            }
+        }
         stage('Test') {
             steps {
                 echo 'Testing..'
