@@ -16,15 +16,15 @@ pipeline {
                 sh 'docker build -t trungnd01/testImages .'
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying......'
-            }
-        }
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing..'
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Deploying......'
+//             }
+//         }
     }
 }
